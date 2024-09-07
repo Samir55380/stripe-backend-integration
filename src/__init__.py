@@ -1,11 +1,13 @@
 """
 Exception handling and logging
 """
+
 import logging
 from logging.handlers import RotatingFileHandler
 import os
 import json
-import jwt
+
+# import jwt
 from fastapi import FastAPI, HTTPException, Request, Depends
 from fastapi.exceptions import RequestValidationError
 from fastapi.responses import JSONResponse
