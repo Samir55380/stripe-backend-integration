@@ -1,10 +1,24 @@
+[tool.poetry]
+name = "StripeAPI"
+version = "0.1.0"
+description = ""
+authors = ["MrPythonAutomation <samir21101993@hotmail.com>"]
+readme = "README.md"
+
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
 [tool.mypy]
 strict = true
 warn_return_any = true
 warn_unused_configs = true
 
+[tool.black]
+line-length = 150
+
 [[tool.mypy.overrides]]
-module = [
-    "python-dotenv",
-]
+module = ["fastapi.responses", "fastapi.*", "dotenv", "boto3","asyncpg", "fastapi", "python-dotenv", "graypy","jsonschema","helpers","database","util","handle_payload","util.util","service.database","src.handle_payload "]
 ignore_missing_imports = true
+disallow_incomplete_defs = false
+disallow_untyped_defs = false
+disallow_untyped_calls = false
